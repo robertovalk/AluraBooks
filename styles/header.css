@@ -1,0 +1,217 @@
+.cabecalho__menu-hamburger {
+    width: 24px;
+    height: 24px;
+    background-image: url(../imagens/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    padding: 2em;
+}
+
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho__menuLogo {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__icones {
+    display: flex;
+    align-items: center;
+   
+}
+
+.cabecalho__img {
+    padding: 0 0.5em;
+
+}
+
+.cabecalho__imagem-descricao {
+    display: none;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+.menuLogo-botao:checked ~ .lista-menu{
+    display: block;
+}
+
+.menuLogo-botao:checked ~ .menu__aberto > .cabecalho__menu-hamburger{
+    background-image: url(../imagens/Menu\ Aberto.svg);
+    padding: 2em;
+}
+
+.menuLogo-botao:checked ~ .menu__aberto {
+    background: var(--azul-degrade);
+}
+
+.menuLogo-botao {
+    display: none;
+}
+
+.titulo__negrito, .titulo__menu {
+    display: none;
+}
+
+.lista-item, .lista__menuTitulo {
+    padding: 1em;
+    background-color: var(--branco);
+    width: 60vw;
+}
+
+.lista__menuTitulo {
+    color: var(--laranja);
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.lista__cabecalho-tablet {
+    display: none;
+}
+
+.lista-link  {
+    background: var(--azul-degrade);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .titulo__negrito, .titulo__menu {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        display: inline;
+    }
+
+    .titulo__negrito {
+        font-weight: 700;
+    }
+
+    .titulo__menu {
+        font-weight: 400;
+    }
+
+    .cabecalho__menu-hamburger, .menuLogo-botao{
+        display: none;
+    }
+
+    .lista__cabecalho-tablet {
+        display: flex;
+        font-family: var(--fonte-principal);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--preto);
+        text-transform: uppercase;
+    }
+
+    .tablet__link {
+        color: var(--preto);
+    }
+
+    .cabecalho__tablet-lista-titulo, .tablet__lista-item{
+        padding: 0 1em;
+    }
+    
+    .cabecalho__img-alternativo {
+        display: none;
+    }
+
+    .cabecalho__tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .categorias__botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .categorias__botao {
+        display: none;
+    }
+
+    .lista-item, .lista__menuTitulo {
+        display: block;
+        width: auto;
+    }
+
+    .categorias__botao:checked ~ .menu__aberto > .cabecalho__tablet-lista-titulo {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .cabecalho__tablet-lista-titulo, 
+    .tablet__lista-item {
+        padding: 2em 1em;    
+    }
+
+    .lista-item:hover{
+        background: var(--azul-degrade);
+        
+    }
+
+    .lista-item:hover>.lista-link {
+        -webkit-text-fill-color: var(--branco);
+    }
+
+    
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho {
+        padding: 0 2em;
+    }
+    
+    .cabecalho__img {
+        display: flex;
+        align-items: center;
+    }
+
+    .cabecalho__img-alternativo {
+        display: none;
+    }
+    
+    .cabecalho__imagem-descricao {
+        display: block;
+        font-family: var(--fonte-principal);
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--preto);
+        
+    }
+
+    
+    .titulo__negrito {
+        font-size: 30px;
+    }
+
+    .lista__cabecalho-tablet {
+        margin-right: auto;
+    }
+
+    .lista-item:hover{
+        background: var(--azul-degrade);
+        
+    }
+
+    .lista-item:hover>.lista-link {
+        -webkit-text-fill-color: var(--branco);
+    }
+    
+}
